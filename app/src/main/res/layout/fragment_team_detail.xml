@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/nameTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/name"
+        app:layout_constraintBottom_toTopOf="@+id/fullNameTitle"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTag="title"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/nameText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="@id/nameTitle"
+        app:layout_constraintStart_toEndOf="@id/titleBarrier"
+        app:layout_constraintTop_toTopOf="@id/nameTitle"
+        tools:text="name content" />
+
+    <TextView
+        android:id="@+id/fullNameTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/full_name"
+        app:layout_constraintBottom_toTopOf="@+id/abbreviation"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTag="title"
+        app:layout_constraintTop_toBottomOf="@+id/nameTitle" />
+
+    <TextView
+        android:id="@+id/fullNameText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="@id/fullNameTitle"
+        app:layout_constraintStart_toEndOf="@id/titleBarrier"
+        app:layout_constraintTop_toTopOf="@id/fullNameTitle"
+        tools:text="lastName content" />
+
+    <TextView
+        android:id="@+id/abbreviation"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/abbreviation"
+        app:layout_constraintBottom_toTopOf="@+id/conferenceTitle"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTag="title"
+        app:layout_constraintTop_toBottomOf="@+id/fullNameTitle" />
+
+    <TextView
+        android:id="@+id/abbreviationText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="@id/abbreviation"
+        app:layout_constraintStart_toEndOf="@id/titleBarrier"
+        app:layout_constraintTop_toTopOf="@id/abbreviation"
+        tools:text="abbreviation content" />
+
+    <TextView
+        android:id="@+id/conferenceTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/conference"
+        app:layout_constraintBottom_toTopOf="@+id/divisionTitle"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTag="title"
+        app:layout_constraintTop_toBottomOf="@+id/abbreviation" />
+
+    <TextView
+        android:id="@+id/conferenceText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="@id/conferenceTitle"
+        app:layout_constraintStart_toEndOf="@id/titleBarrier"
+        app:layout_constraintTop_toTopOf="@id/conferenceTitle"
+        tools:text="conference content" />
+
+    <TextView
+        android:id="@+id/divisionTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/division"
+        app:layout_constraintBottom_toTopOf="@+id/cityTitle"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTag="title"
+        app:layout_constraintTop_toBottomOf="@+id/conferenceTitle" />
+
+    <TextView
+        android:id="@+id/divisionText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="@id/divisionTitle"
+        app:layout_constraintStart_toEndOf="@id/titleBarrier"
+        app:layout_constraintTop_toTopOf="@id/divisionTitle"
+        tools:text="division content" />
+
+    <TextView
+        android:id="@+id/cityTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/city"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTag="title"
+        app:layout_constraintTop_toBottomOf="@+id/divisionTitle" />
+
+    <TextView
+        android:id="@+id/cityText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="@id/cityTitle"
+        app:layout_constraintStart_toEndOf="@id/titleBarrier"
+        app:layout_constraintTop_toTopOf="@id/cityTitle"
+        tools:text="city content" />
+
+    <androidx.constraintlayout.widget.Barrier
+        android:id="@+id/titleBarrier"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:barrierDirection="end"
+        app:barrierMargin="16dp"
+        app:constraint_referenced_tags="title" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

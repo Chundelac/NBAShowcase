@@ -1,0 +1,24 @@
+<resources>
+    <string name="app_name">NBA Showcase</string>
+    <string name="user_intro_dialog_title">Warning</string>
+    <string name="user_intro_dialog_text">This application is a tech demo.\nIt is not meant to be used on daily basis.\nIt might not work on your device.\nAll data shown may not be accurate.</string>
+    <string name="ok">OK</string>
+    <string name="first_name">First Name</string>
+    <string name="last_name">Last Name</string>
+    <string name="position">Position</string>
+    <string name="height">Height</string>
+    <string name="weight">Weight</string>
+    <string name="jersey_number">Jersey number</string>
+    <string name="college">College</string>
+    <string name="country">Country</string>
+    <string name="draft_year">Draft year</string>
+    <string name="draft_round">Draft round</string>
+    <string name="draft_number">Draft number</string>
+    <string name="name">Name</string>
+    <string name="full_name">Full Name</string>
+    <string name="abbreviation">Abbreviation</string>
+    <string name="conference">Conference</string>
+    <string name="division">Division</string>
+    <string name="city">City</string>
+    <string name="team_info">team info</string>
+</resources>
