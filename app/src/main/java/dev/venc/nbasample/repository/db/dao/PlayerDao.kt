@@ -13,7 +13,10 @@ interface PlayerDao {
     fun getAll(): List<Player>
 
     @Query("SELECT * FROM players WHERE playerId IN (:playerId) LIMIT 1")
-    fun loadById(playerId: Int): Player?
+    fun getById(playerId: Int): Player?
+
+    @Query("SELECT * FROM players WHERE playerId >= :playerId LIMIT :limit")
+    fun getMultipleFromId(playerId: Int, limit: Int): List<Player>
 
     @Insert(onConflict = OnConflictStrategy.REPLACE)
     fun insert(player: Player)

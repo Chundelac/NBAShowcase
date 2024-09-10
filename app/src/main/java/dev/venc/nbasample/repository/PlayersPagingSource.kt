@@ -1,5 +1,6 @@
 package dev.venc.nbasample.repository
 
+import android.util.Log
 import androidx.paging.PagingSource
 import androidx.paging.PagingState
 import dev.venc.nbasample.repository.datamodel.Player
@@ -18,6 +19,7 @@ class PlayersPagingSource(val repository: NBARepository) : PagingSource<Int, Pla
         return try {
             val page = LoadResult.Page(
                 withContext(Dispatchers.IO) {
+                    Log.w("GET PLAYERS", "FROM $start, AMOUNT ${params.loadSize}")
                     repository.getPayers(start, params.loadSize)
                 },
 
