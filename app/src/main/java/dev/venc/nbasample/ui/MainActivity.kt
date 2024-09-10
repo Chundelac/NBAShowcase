@@ -7,7 +7,9 @@ import com.google.android.material.dialog.MaterialAlertDialogBuilder
 import dev.venc.nbasample.R
 import dev.venc.nbasample.databinding.ActivityMainBinding
 import dev.venc.nbasample.repository.datastore.AppSettings
+import dev.venc.nbasample.repository.db.PlayerDatabase
 import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.async
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.withContext
 
@@ -18,6 +20,7 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         appSettings = AppSettings(this)
+        lifecycleScope.launch { PlayerDatabase.buildDatabase(applicationContext) }
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
     }
