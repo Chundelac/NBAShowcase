@@ -18,16 +18,6 @@ class NBARepository {
         throw (Exception("Player not found")) //TODO better error handling
     }
 
-    suspend fun getAllPayers(): List<Player>? = withContext(Dispatchers.IO) {
-        val response = NBARetrofitService.nbaApi.getAllPlayer()
-
-        if (response.isSuccessful) {
-            return@withContext response.body()?.data
-        }
-
-        return@withContext null
-    }
-
     suspend fun getPayers(startingId: Int, amount: Int): List<Player> = withContext(Dispatchers.IO) {
         val response = NBARetrofitService.nbaApi.getAllPlayer()
 
